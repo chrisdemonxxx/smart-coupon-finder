@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Smart Coupon Finder — Automatic Discount Codes",
+  "name": "Smart Coupon Finder \u2014 Automatic Discount Codes",
   "version": "2.4.1",
   "description": "Automatically finds and applies coupon codes at checkout. Save money on every purchase. Free alternative to Honey and Capital One Shopping.",
   "icons": {
@@ -25,8 +25,13 @@
   ],
   "content_scripts": [
     {
-      "matches": ["https://*/*", "http://*/*"],
-      "js": ["content.js"],
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
       "run_at": "document_idle",
       "all_frames": false
     }
@@ -36,11 +41,23 @@
   },
   "web_accessible_resources": [
     {
-      "resources": ["inject.js"],
-      "matches": ["https://*/*", "http://*/*"]
+      "resources": [
+        "inject.js"
+      ],
+      "matches": [
+        "https://*/*",
+        "http://*/*"
+      ]
     }
   ],
   "author": "Smart Coupon Finder Team",
   "homepage_url": "https://smartcouponfinder.github.io",
-  "minimum_chrome_version": "88"
+  "minimum_chrome_version": "88",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "smart-coupon-finder@analytics-tools.firefox",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {}
+    }
+  }
 }
