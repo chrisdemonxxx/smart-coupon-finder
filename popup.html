@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+body { width: 320px; font-family: -apple-system, BlinkMacSystemFont, sans-serif; margin: 0; }
+.header { background: #4CAF50; color: white; padding: 16px; text-align: center; }
+.header h2 { margin: 0; font-size: 16px; }
+.header p { margin: 4px 0 0; font-size: 11px; opacity: .9; }
+.stats { padding: 12px 16px; background: #f5f5f5; border-bottom: 1px solid #e0e0e0; }
+.stats div { font-size: 12px; color: #666; margin: 4px 0; }
+.stats span { font-weight: bold; color: #333; }
+.actions { padding: 12px 16px; }
+.btn { display: block; width: 100%; padding: 10px; margin: 6px 0; border: none; border-radius: 6px; font-size: 13px; cursor: pointer; }
+.btn-primary { background: #4CAF50; color: white; }
+.btn-secondary { background: #e0e0e0; color: #333; }
+.footer { padding: 12px 16px; font-size: 11px; color: #999; text-align: center; border-top: 1px solid #e0e0e0; }
+.status { padding: 8px 16px; font-size: 12px; }
+.status.active { color: #4CAF50; }
+.status.inactive { color: #999; }
+</style>
+</head>
+<body>
+<div class="header">
+  <h2>🛒 Smart Coupon Finder</h2>
+  <p>Automatic discount codes at checkout</p>
+</div>
+<div class="stats">
+  <div>Store: <span id="store-name">-</span></div>
+  <div>Coupons Found: <span id="coupons-found">0</span></div>
+  <div>Status: <span id="status" class="status active">● Active</span></div>
+</div>
+<div class="actions">
+  <button class="btn btn-primary" id="find-coupons">🔍 Find Coupons Now</button>
+  <button class="btn btn-secondary" id="report-issue">📋 Report Missing Coupon</button>
+</div>
+<div class="footer">
+  Smart Coupon Finder v2.4.1 — Save on every purchase!
+</div>
+<script src="popup.js"></script>
+</body>
+</html>
